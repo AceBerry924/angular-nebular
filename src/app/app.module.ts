@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,12 +16,14 @@ import { NbThemeModule, NbLayoutModule, NbContextMenuModule, NbActionsModule, Nb
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbActionsModule,
     NbMenuModule.forRoot(),
     NbContextMenuModule,
     NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

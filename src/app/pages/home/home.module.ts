@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NbInputModule, NbButtonModule, NbCardModule, NbDialogModule } from '@nebular/theme';
 
@@ -16,6 +17,8 @@ import { HomeComponent } from './home.component';
     NbButtonModule,
     NbDialogModule.forRoot(),
     HomeRoutingModule,
-  ]
+    FormsModule
+  ],
+
 })
 export class HomeModule { }

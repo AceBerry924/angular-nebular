@@ -1,0 +1,16 @@
+<div class="home">
+  <nb-card accent="info">
+    <nb-card-header>Scalio Angular test</nb-card-header>
+    <nb-card-body>
+      <p>Input an id to get Post</p>
+      <form (ngSubmit)="getAPI()" #form="ngForm" aria-labelledby="title">
+        <div class="d-flex">
+          <input nbInput fullWidth step="1" placeholder="Input an Id" [(ngModel)]="postId"
+            name="postId" autoFocus />
+          <button nbButton outline status="info">Send</button>
+        </div>
+      </form>
+    </nb-card-body>
+    <nb-card-footer>By Leon</nb-card-footer>
+  </nb-card>
+</div>
