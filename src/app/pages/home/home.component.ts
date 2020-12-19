@@ -1,4 +1,5 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -12,14 +13,25 @@ export class HomeComponent implements OnInit {
   post: any = null;
   loading: boolean = false;
 
-  constructor(private dataService: DataService) { }
+  constructor(private router: Router, private dataService: DataService) { }
 
-  ngOnInit() { }
+  ngOnInit(): void { }
 
-  getAPI() {
+  getAPI(): void {
+    this.loading = true;
+
     this.dataService.getPost(this.postId).subscribe((data) => {
-      console.log(data);
+      this.loading = false;
+
+      this.router.navigate(['/details'], {
+        state: {
+          data: data
+        }
+      });
+
+    }, error => {
+      console.log('oops', error);
+      this.loading = false;
     })
   }
-
 }
