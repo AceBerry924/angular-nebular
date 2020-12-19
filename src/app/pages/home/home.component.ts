@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../../services/data.service';
+
+import { APIService } from '../../services/api.service';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-home',
@@ -13,21 +15,22 @@ export class HomeComponent implements OnInit {
   post: any = null;
   loading: boolean = false;
 
-  constructor(private router: Router, private dataService: DataService) { }
+  constructor(
+    private router: Router,
+    private apiService: APIService,
+    private postService: PostService
+  ) { }
 
   ngOnInit(): void { }
 
   getAPI(): void {
     this.loading = true;
 
-    this.dataService.getPost(this.postId).subscribe((data) => {
+    this.apiService.getPostData(this.postId).subscribe((data) => {
       this.loading = false;
 
-      this.router.navigate(['/details'], {
-        state: {
-          data: data
-        }
-      });
+      this.postService.setPost(data);
+      this.router.navigate(['/details']);
 
     }, error => {
       console.log('oops', error);

@@ -1,11 +1,11 @@
-<div class="home">
-  <nb-card accent="info" [nbSpinner]="loading" nbSpinnerStatus="info">
-    <nb-card-header>Scalio Angular test</nb-card-header>
+<div class="home-wrap">
+  <h3 class="text-center mb-4">Scalio Angular Test</h3>
+  <nb-card status="primary" [nbSpinner]="loading" nbSpinnerStatus="info">
+    <nb-card-header>Input an id to get Post</nb-card-header>
     <nb-card-body>
-      <p>Input an id to get Post</p>
       <form (ngSubmit)="getAPI()" #form="ngForm" aria-labelledby="title">
         <div class="d-flex">
-          <input nbInput fullWidth step="1" placeholder="Input an Id" [(ngModel)]="postId"
+          <input nbInput fullWidth status="info" placeholder="Input an Id" [(ngModel)]="postId"
             name="postId" autoFocus />
           <button nbButton outline status="info">Send</button>
         </div>

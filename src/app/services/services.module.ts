@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService } from "./data.service";
+import { APIService } from "./api.service";
+import { PostService } from './post.service';
 
 const serviceProviders = [
-  DataService
+  APIService,
+  PostService
 ];
 
 @NgModule({
