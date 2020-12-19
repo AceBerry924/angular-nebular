@@ -1,16 +1,17 @@
 <div class="home-wrap">
-  <h3 class="text-center mb-4">Scalio Angular Test</h3>
-  <nb-card status="primary" [nbSpinner]="loading" nbSpinnerStatus="info">
+  <h4 class="text-center text-primary mb-3">Scalio Angular Test</h4>
+
+  <nb-card status="info" [nbSpinner]="loading" nbSpinnerStatus="info">
     <nb-card-header>Input an id to get Post</nb-card-header>
     <nb-card-body>
       <form (ngSubmit)="getAPI()" #form="ngForm" aria-labelledby="title">
         <div class="d-flex">
           <input nbInput fullWidth status="info" placeholder="Input an Id" [(ngModel)]="postId"
             name="postId" autoFocus />
-          <button nbButton outline status="info">Send</button>
+          <button nbButton outline hero status="info">Send</button>
         </div>
       </form>
     </nb-card-body>
-    <nb-card-footer>By Leon</nb-card-footer>
+    <nb-card-footer>By Leon © 2020</nb-card-footer>
   </nb-card>
 </div>
