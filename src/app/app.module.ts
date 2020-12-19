@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbContextMenuModule, NbActionsModule, NbMenuModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbContextMenuModule, NbButtonModule, NbCardModule, NbActionsModule, NbMenuModule } from '@nebular/theme';
+import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { NbThemeModule, NbLayoutModule, NbContextMenuModule, NbActionsModule, Nb
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbActionsModule,
+    NbButtonModule, NbCardModule,
     NbMenuModule.forRoot(),
     NbContextMenuModule,
     NbEvaIconsModule,
