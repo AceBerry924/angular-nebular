@@ -1,1 +1,13 @@
-<p>details works!</p>
+<div class="details">
+  <button nbButton status="primary">
+    <nb-icon icon="chevron-left"></nb-icon>Back
+  </button>
+
+  <nb-card accent="info">
+    <nb-card-header>{{post?.title}}</nb-card-header>
+    <nb-card-body>
+      <p>{{post?.body}}</p>
+    </nb-card-body>
+    <nb-card-footer>By Leon</nb-card-footer>
+  </nb-card>
+</div>

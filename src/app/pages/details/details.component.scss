@@ -1,0 +1,23 @@
+:host {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  nb-card {
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 32rem;
+    }
+
+    @media (min-width: 1024px) {
+      width: 42rem;
+    }
+
+    nb-card-header {
+      font-size: 1.125rem;
+    }
+  }
+}

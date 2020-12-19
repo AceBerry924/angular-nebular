@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+
+import { PostService } from '../../services/post.service';
+
+import { PostModel } from '../../models/post.model';
 
 @Component({
   selector: 'app-details',
@@ -8,10 +12,17 @@ import { Location } from '@angular/common';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private location: Location) { }
+  post: PostModel = null;
+
+  constructor(private router: Router, private postService: PostService) {
+  }
 
   ngOnInit(): void {
-    console.log(this.location.getState());
+    this.post = this.postService.getPost();
+
+    if (this.post === null) {
+      this.router.navigateByUrl("/");
+    }
   }
 
 }
