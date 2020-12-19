@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NbCardModule, NbButtonModule, NbIconModule } from '@nebular/theme';
+import { NbCardModule, NbButtonModule, NbIconModule, NbInputModule } from '@nebular/theme';
 
 import { DetailsComponent } from './details.component';
 import { DetailsRoutingModule } from './details-routing.module';
@@ -9,8 +10,10 @@ import { DetailsRoutingModule } from './details-routing.module';
   declarations: [DetailsComponent],
   imports: [
     NbCardModule,
-    NbButtonModule,
     NbIconModule,
+    NbButtonModule,
+    NbInputModule,
+    FormsModule,
     CommonModule,
     DetailsRoutingModule
   ]

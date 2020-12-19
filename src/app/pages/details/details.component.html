@@ -3,12 +3,12 @@
     <nb-icon icon="chevron-left"></nb-icon>Back
   </button>
 
-  <h5 class="text-center mb-3">Post Data</h5>
-
+  <h5 class="text-center mb-3 text-success">Post Data</h5>
   <nb-card accent="success">
-    <nb-card-header>{{post?.title}}</nb-card-header>
-    <nb-card-body>
-      <p>{{post?.body}}</p>
-    </nb-card-body>
+    <nb-card-header>
+      {{post?.title}}
+      <textarea nbInput fullWidth status="success" [(ngModel)]="post.body" rows="5" readonly
+        class="mt-4"></textarea>
+    </nb-card-header>
   </nb-card>
 </div>
