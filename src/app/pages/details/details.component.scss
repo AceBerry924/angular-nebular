@@ -5,6 +5,12 @@
   align-items: center;
   justify-content: center;
 
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   nb-card {
     width: 100%;
 

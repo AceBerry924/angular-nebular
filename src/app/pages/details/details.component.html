@@ -1,13 +1,14 @@
 <div class="details">
-  <button nbButton status="primary">
+  <button nbButton hero status="danger" shape="semi-round" (click)="goHomePage()">
     <nb-icon icon="chevron-left"></nb-icon>Back
   </button>
 
-  <nb-card accent="info">
+  <h5 class="text-center mb-3">Post Data</h5>
+
+  <nb-card accent="danger">
     <nb-card-header>{{post?.title}}</nb-card-header>
     <nb-card-body>
       <p>{{post?.body}}</p>
     </nb-card-body>
-    <nb-card-footer>By Leon</nb-card-footer>
   </nb-card>
 </div>

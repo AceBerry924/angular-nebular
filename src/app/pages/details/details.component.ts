@@ -18,11 +18,17 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // get post data from PostService
     this.post = this.postService.getPost();
 
+    // go to Homepage if post is null
     if (this.post === null) {
-      this.router.navigateByUrl("/");
+      this.goHomePage();
     }
+  }
+
+  goHomePage(): void {
+    this.router.navigateByUrl("/");
   }
 
 }
