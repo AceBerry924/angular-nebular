@@ -6,13 +6,12 @@ import { PostModel } from '../models/post.model';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
-  apiUrl: string = 'https://jsonplaceholder.typicode.com/posts'
+export class APIService {
+  apiUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 
-
-  getPost(postId: string) {
+  getPostData(postId: string) {
     return this.http.get<PostModel>(`${this.apiUrl}/${postId}`);
   }
 
