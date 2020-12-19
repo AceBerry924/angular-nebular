@@ -1,0 +1,8 @@
+.dialog-card {
+  width: 20rem;
+
+  @media (min-width: 1024px) {
+    width: 32rem;
+  }
+
+}
