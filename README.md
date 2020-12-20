@@ -15,7 +15,7 @@ Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The ap
 ### Environment
 
 - Node version `v14.11.0`
-- Angular version `10.1.5`
+- Angular version `v10.1.5`
 
 ### Structure
 
