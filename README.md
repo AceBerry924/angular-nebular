@@ -12,6 +12,11 @@ Run `npm install` for installing all packages.
 
 Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+### Environment
+
+- Node version `v14.11.0`
+- Angular version `10.1.5`
+
 ### Structure
 
 - `components` folder to keep shared components
