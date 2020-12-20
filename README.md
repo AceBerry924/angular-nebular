@@ -2,6 +2,15 @@
 
 Web App - Assignment
 
+## Instruction
+
+## Package Insall
+
+Run `npm install` for installing all packages.
+
+## Development server
+
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Overview
 The goal is to create a simple web application which makes a request to an API, parses the response, and displays the result in the UI. The app will consist of two modules - one home entry module that contains a root index page and one **lazy loaded** detail module.  
